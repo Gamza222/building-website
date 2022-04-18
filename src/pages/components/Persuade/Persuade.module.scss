@@ -1,0 +1,88 @@
+@import '../assets/mixins';
+
+.persuade {
+
+    &__container {
+        @include container;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5rem;
+
+        @include media(sm) {
+            margin-bottom: 2rem;
+        }
+
+        &__box {
+            display: grid;
+            grid-template-columns: 1fr 0.5fr;
+            box-shadow: 1px 0 8px 4px rgb(0 0 0 / 8%);
+            align-items: center;
+            justify-items: center;
+            padding: 1rem;
+            width: 100%;
+            background-color: $color-content;
+
+            @include media(sm) {
+                grid-template-columns: 1fr;
+                padding: 0.5rem;
+            }
+
+            &__phone {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+                padding: 4rem;
+                background: $color-bg;
+                box-shadow: 1px 0 8px 4px rgb(0 0 0 / 8%);
+
+                @include media(sm) {
+                    padding: 2rem 1rem;
+                    align-items: start;
+                }
+
+                > p {
+                    font-size: 24px;
+                    margin-bottom: 1.5rem;
+                    font-weight: 600;
+
+                    @include media(md) {
+                        font-size: 18px;
+                    }
+                    @include media(sm) {
+                        font-size: 15px;
+                    }
+                }
+
+                > a {
+                    font-size: 50px;
+                    color: $color-primary;
+                    font-weight: 800;
+                    text-align: left;
+
+                    @include media(md) {
+                        font-size: 37px;
+                    }
+                    @include media(sm) {
+                        font-size: 31px;
+                    }
+                    @include media(vsm) {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            > img {
+                height: 180px;
+                width: max-content;
+
+                @include media(sm) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

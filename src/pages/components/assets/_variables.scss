@@ -1,0 +1,36 @@
+$color-primary: #FF6B6C;
+$color-primary-variant: #FFC145;
+$color-bg: #FFFFFB;
+$color-bg-variant: #5B5F97;
+$color-content: #cbcbdd;
+$color-white: #fff;
+$color-black: #000;
+$transition: all 0.3s ease;
+$box-shadow: 1px 0 8px 4px rgb(0 0 0 / 8%);
+
+@mixin media($m) {
+    @if $m == md {
+        @media screen and (max-width: 1200px) {
+            @content;
+        }
+    } @else if $m == sm {
+        @media screen and (max-width: 750px) {
+            @content;
+        }
+    }
+
+    @else if $m == vsm {
+        @media screen and (max-width: 300px) {
+            @content;
+        }
+    } @else if $m == b {
+        @media screen and (max-width:1760px) {
+            @content;
+        }
+    } @else if $m == smb {
+        @media screen and (max-width:1360px) {
+            @content;
+        }
+    }
+}
+

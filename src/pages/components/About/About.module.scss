@@ -1,0 +1,18 @@
+@import '../assets/mixins';
+
+.about {
+
+    &__container {
+        @include container;
+        background: $color-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+
+        &__equipment {
+            display: flex;
+            flex-direction: column;
+            background-color: $color-white;
+        }
+    }
+}

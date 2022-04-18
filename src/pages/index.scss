@@ -1,0 +1,99 @@
+@import './components/assets/variables';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600&family=Rubik:ital,wght@0,300;0,600;0,700;0,800;1,400&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 1rem;
+    background: $color-primary;
+    color: $color-white;
+    border: 1px solid $color-primary;
+    transition: $transition;
+    font-weight: 800;
+    font-size: 12px;
+
+    &:hover {
+        background: $color-white;
+        color: $color-primary;
+        border-color: $color-primary;
+    }
+}
+
+a {
+    color: $color-black;
+    font-weight: 500;
+}
+
+
+a {
+    position: relative;
+    color: $color-black;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+
+    &:hover {
+        &:before {
+            opacity: 100%;
+        }
+    }
+
+    @include media(md) {
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 2px;
+        background: $color-primary;
+        bottom: -5px;
+        transition: $transition;
+    }
+
+    @include media (vsm) {
+        font-size: 18px;
+    }
+}
+
+h2 {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 62px;
+    width: 60%;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 16px;
+        width: 80px;
+        left: 0;
+        background: $color-primary;
+        top: -20px;
+    }
+
+    @include media(md) {
+        font-size: 32px;
+        width: 100%;
+    }
+
+    @include media(sm) {
+        font-size: 32px;
+    }
+}
+

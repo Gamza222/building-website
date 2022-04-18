@@ -1,0 +1,85 @@
+@import '../assets/mixins';
+
+.main {
+
+    &__container {
+        padding: 1rem 20rem;
+        height: 80vh;
+        margin-bottom: 5rem;
+        background: url('../../../images/main-pico.png');
+        background-position-y: 10%;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &__content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            
+            > h1 {
+                font-size: 32px;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                display: flex;
+                flex-direction: column;
+
+                > span {
+                     font-size: 72px;
+                     font-weight: 700;
+                }
+
+                @include media(sm) {
+                    font-size: 20px;
+
+                    > span {
+                        font-size: 40px;
+                    }
+                }
+
+                @include media(vsm) {
+                    font-size: 17px;
+
+                    > span {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            > p { 
+                font-size: 18px;
+                margin-bottom: 1rem;
+            }
+
+            &__price {
+                @include price;
+                margin-bottom: 1rem;
+            }
+
+            &__buttons {
+                display: flex;
+                align-items: center;
+
+                > a {
+                    font-size: 24px;
+                    margin-left: 1rem;
+                    color: $color-primary;
+                    font-weight: 600;
+
+                    @include media(sm) {
+                        margin-left: 0;
+                    }
+                }
+
+                @include media(sm) {
+                    flex-direction: column-reverse; 
+                    gap: 0.5rem;
+                    align-items: start;
+                }
+            }
+        }
+
+        @include container;
+    }
+}
